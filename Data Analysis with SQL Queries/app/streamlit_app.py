@@ -544,15 +544,3 @@ with tab3:
             with chart_c2:
                 st.caption("LLM calls")
                 st.bar_chart(results_df.set_index("Framework")[["LLM calls"]], color=chart_color)
-
-            faster = results_df.loc[results_df["Latency (s)"].idxmin(), "Framework"]
-            fewer_calls = results_df.loc[results_df["LLM calls"].idxmin(), "Framework"] if results_df["LLM calls"].notna().all() else None
-            both_correct = (results_df["Correct"] == "yes").all()
-            insight_bits = [f"**{faster}** was faster on this question."]
-            if fewer_calls:
-                insight_bits.append(f"**{fewer_calls}** used fewer LLM calls.")
-            insight_bits.append("Both frameworks answered correctly." if both_correct else "Not both frameworks answered correctly — check the cards above.")
-            st.markdown(" ".join(insight_bits))
-
-            st.markdown("##### Raw result")
-            st.dataframe(results_df, hide_index=True, use_container_width=True)
