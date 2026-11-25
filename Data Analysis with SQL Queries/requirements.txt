@@ -20,3 +20,5 @@ PyYAML
 python-dotenv
 matplotlib
 SQLAlchemy
+
+litellm
