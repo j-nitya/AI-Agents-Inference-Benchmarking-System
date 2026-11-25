@@ -1,9 +1,10 @@
 node_modules/
-data/
+Data Analysis with SQL Queries/data/raw/
 datasets/
 models/
 outputs/
 *.csv
+!Data Analysis with SQL Queries/data/expected_results.csv
 *.zip
 *.tar
 *.pt

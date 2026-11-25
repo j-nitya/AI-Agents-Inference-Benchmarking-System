@@ -1,0 +1,6 @@
+question,answer
+How many unique product IDs are there in the table?,1350.0
+How many unique values for 'category' are in the database?,211.0
+Order the products by product_id and return the rating of the first product?,4.1
+"What is the average rating, rounded to two decimal places, of the products in the category 'Electronics'?",4.08
+What is the maximum value in the column 'discount_percentage' in the table?,94.0
